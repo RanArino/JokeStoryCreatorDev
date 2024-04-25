@@ -14,7 +14,7 @@ import re
 #import RRDBNet_arch as arch
 import textwrap
 import time
-import torch
+#import torch
 import yaml
 
 
@@ -830,49 +830,49 @@ class Video:
         return cropped_image
 
 
-    def image_resolution(self, img_path: str = '', target_size: tuple = (), img_save: bool = False, new_img_path: str = '', chunk_size: int = 128, overlap: int = 16):
-        img = cv2.imread(img_path)
-        # Convert from BGR to RGB
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        # adjust the original image to achieve the target size
-        img = cv2.resize(img, (int(target_size[0]/4), int(target_size[1]/4)))
-        img = np.float32(img) / np.array(255.0)  # type: ignore
-        img = torch.from_numpy(np.transpose(img[:, :, [2, 1, 0]], (2, 0, 1))).float()
-        img = img.unsqueeze(0).to(self.device)  # type: ignore
+    # def image_resolution(self, img_path: str = '', target_size: tuple = (), img_save: bool = False, new_img_path: str = '', chunk_size: int = 128, overlap: int = 16):
+    #     img = cv2.imread(img_path)
+    #     # Convert from BGR to RGB
+    #     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    #     # adjust the original image to achieve the target size
+    #     img = cv2.resize(img, (int(target_size[0]/4), int(target_size[1]/4)))
+    #     img = np.float32(img) / np.array(255.0)  # type: ignore
+    #     img = torch.from_numpy(np.transpose(img[:, :, [2, 1, 0]], (2, 0, 1))).float()
+    #     img = img.unsqueeze(0).to(self.device)  # type: ignore
 
-        _, _, h, w = img.shape
-        output_image = np.zeros((3, h * 4, w * 4), dtype=np.float32)  # 4 times upscale
-        # Process the image in chunks
-        for y in range(0, h, chunk_size - overlap):
-            for x in range(0, w, chunk_size - overlap):
-                # Adjust chunk size for edges
-                y_end = min(y + chunk_size, h)
-                x_end = min(x + chunk_size, w)
+    #     _, _, h, w = img.shape
+    #     output_image = np.zeros((3, h * 4, w * 4), dtype=np.float32)  # 4 times upscale
+    #     # Process the image in chunks
+    #     for y in range(0, h, chunk_size - overlap):
+    #         for x in range(0, w, chunk_size - overlap):
+    #             # Adjust chunk size for edges
+    #             y_end = min(y + chunk_size, h)
+    #             x_end = min(x + chunk_size, w)
                 
-                # Process chunk
-                with torch.no_grad():
-                    chunk = img[:, :, y:y_end, x:x_end]
-                    output_chunk = self.model(chunk).data.squeeze().float().cpu().clamp_(0, 1).numpy()  # type: ignore
+    #             # Process chunk
+    #             with torch.no_grad():
+    #                 chunk = img[:, :, y:y_end, x:x_end]
+    #                 output_chunk = self.model(chunk).data.squeeze().float().cpu().clamp_(0, 1).numpy()  # type: ignore
                                 
-                # Calculate output coordinates, considering upscale factor
-                y_out, x_out = y * 4, x * 4
-                y_end_out, x_end_out = y_end * 4, x_end * 4
-                output_image[:, y_out:y_end_out, x_out:x_end_out] = output_chunk
+    #             # Calculate output coordinates, considering upscale factor
+    #             y_out, x_out = y * 4, x * 4
+    #             y_end_out, x_end_out = y_end * 4, x_end * 4
+    #             output_image[:, y_out:y_end_out, x_out:x_end_out] = output_chunk
 
 
-        output_image = np.transpose(output_image[[2, 1, 0], :, :], (1, 2, 0))
-        output_image = (output_image * 255.0).round()
-        output_image = cv2.cvtColor(output_image, cv2.COLOR_RGB2BGR)
+    #     output_image = np.transpose(output_image[[2, 1, 0], :, :], (1, 2, 0))
+    #     output_image = (output_image * 255.0).round()
+    #     output_image = cv2.cvtColor(output_image, cv2.COLOR_RGB2BGR)
 
-        # update the current image if needed
-        if img_save:
-            if new_img_path:
-                new_img_path = new_img_path if new_img_path.endswith(".png") else f"{new_img_path}.png"
-                cv2.imwrite(f"{new_img_path}", output_image)
-            else:
-                cv2.imwrite(img_path, output_image)
+    #     # update the current image if needed
+    #     if img_save:
+    #         if new_img_path:
+    #             new_img_path = new_img_path if new_img_path.endswith(".png") else f"{new_img_path}.png"
+    #             cv2.imwrite(f"{new_img_path}", output_image)
+    #         else:
+    #             cv2.imwrite(img_path, output_image)
 
-        return output_image
+    #     return output_image
 
 
     def apply_soft_edge(self, image, edge_width_pixels: int = 50, color: str = 'white'):
@@ -1135,7 +1135,7 @@ class GoogleAPI:
                     'tags': list({"shorts", "short joke", "funny shorts", "comedy clip", "instant fun", "humor", "funny story", "joke", "english", "study english", "short story", *tags})
                 },
                 'status': {
-                    'privacyStatus': 'public',  # You could choose 'private', 'public' or 'unlisted'
+                    'privacyStatus': 'private',  # must choose 'private' due to scheduled post
                     'publishAt': publish_time,
                     'selfDeclaredMadeForKids': False
                 }
