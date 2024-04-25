@@ -1,0 +1,18 @@
+### JokeStoryCreator/Developer/
+__pycache__/
+__temp__.mp4
+API/client_secret.json
+API/service_account_key.json
+API/YouTube_Video_Category.txt
+Audios/
+config/
+config.py
+Landscapes/
+Icons/
+Music/
+RRDB_ESRGAN_x4.pth
+RRDBNet_arch.py
+Specials/
+story_script.json
+Videos/
+ViewVistas/

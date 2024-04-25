@@ -1,0 +1,974 @@
+[
+    {
+        "id":0,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"I told my computer I needed a break, and now it\u2019s giving me error messages as a form of emotional support."
+    },
+    {
+        "id":1,
+        "culture":"General",
+        "category":"Knock-knock jokes",
+        "joke":"Knock, knock. Who\u2019s there? Control Freak. Con... Okay, now you say, 'Control Freak who?"
+    },
+    {
+        "id":2,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"I told my wife she should embrace her mistakes. She gave me a hug."
+    },
+    {
+        "id":3,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"Why don't we tell secrets at the office anymore? Because we have too many leakers and not enough printers!"
+    },
+    {
+        "id":4,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"I have a stepladder because my real ladder left when I was just a kid."
+    },
+    {
+        "id":5,
+        "culture":"General",
+        "category":"Doctor jokes",
+        "joke":"I told my doctor I broke my arm in two places. He told me to stop going to those places."
+    },
+    {
+        "id":6,
+        "culture":"General",
+        "category":"Science jokes",
+        "joke":"Did you hear about the famous microbiologist who visited 30 different countries and spoke 6 languages? He was a man of many cultures."
+    },
+    {
+        "id":7,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I told my wife she was drawing her eyebrows too high. She looked surprised."
+    },
+    {
+        "id":8,
+        "culture":"General",
+        "category":"Dad jokes",
+        "joke":"I'm reading a book on anti-gravity. It's impossible to put down!"
+    },
+    {
+        "id":9,
+        "culture":"General",
+        "category":"Math jokes",
+        "joke":"Why was the math book sad? Because it had too many problems."
+    },
+    {
+        "id":10,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"I'm reading a book on the history of glue \u2013 I just can't seem to put it down."
+    },
+    {
+        "id":11,
+        "culture":"General",
+        "category":"Technology jokes",
+        "joke":"Why was the computer cold? It left its Windows open."
+    },
+    {
+        "id":12,
+        "culture":"General",
+        "category":"Knock-knock jokes",
+        "joke":"Knock, knock. Who\u2019s there? Lettuce. Lettuce who? Lettuce in, it's cold out here!"
+    },
+    {
+        "id":13,
+        "culture":"General",
+        "category":"School jokes",
+        "joke":"Why was the math book sad? It had too many problems."
+    },
+    {
+        "id":14,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"You know you\u2019re an adult when you get excited about a new sponge at the kitchen sink."
+    },
+    {
+        "id":15,
+        "culture":"General",
+        "category":"Sports jokes",
+        "joke":"Why did the golfer bring two pairs of pants? In case he got a hole in one."
+    },
+    {
+        "id":16,
+        "culture":"General",
+        "category":"Animal jokes",
+        "joke":"What do you call an alligator in a vest? An in-vest-igator."
+    },
+    {
+        "id":17,
+        "culture":"General",
+        "category":"Food jokes",
+        "joke":"I'm on a seafood diet. I see food, and I eat it."
+    },
+    {
+        "id":18,
+        "culture":"General",
+        "category":"Parody jokes",
+        "joke":"I used to be a baker, but I couldn't make enough dough."
+    },
+    {
+        "id":19,
+        "culture":"General",
+        "category":"Math jokes",
+        "joke":"Why was the equal sign so humble? Because it knew it wasn't less than or greater than anyone else."
+    },
+    {
+        "id":20,
+        "culture":"General",
+        "category":"Historical jokes",
+        "joke":"I'm a big fan of whiteboards. They're remarkable."
+    },
+    {
+        "id":21,
+        "culture":"General",
+        "category":"Family jokes",
+        "joke":"I used to play piano by ear, but now I use my hands."
+    },
+    {
+        "id":22,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"Why did the doctor carry a red pen? In case they needed to draw blood."
+    },
+    {
+        "id":23,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"I would tell you a joke about an elevator, but it\u2019s an uplifting experience."
+    },
+    {
+        "id":24,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"You know you\u2019re texting too much when you try to text, but you\u2019re on a landline."
+    },
+    {
+        "id":25,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why did the coffee file a police report? It got mugged."
+    },
+    {
+        "id":26,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"Why don't scientists trust atoms? Because they make up everything."
+    },
+    {
+        "id":27,
+        "culture":"General",
+        "category":"Sports jokes",
+        "joke":"Why did the scarecrow become a successful soccer player? Because he was outstanding in his field."
+    },
+    {
+        "id":28,
+        "culture":"General",
+        "category":"Historical jokes",
+        "joke":"Why was the math book from the 18th century so confident? It knew it had many problems, but they were all solved."
+    },
+    {
+        "id":29,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"The future, the present, and the past walked into a bar. Things got a little tense."
+    },
+    {
+        "id":30,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"What do you call fake spaghetti? An impasta."
+    },
+    {
+        "id":31,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why do we tell actors to 'break a leg'? Because every play has a cast."
+    },
+    {
+        "id":32,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why don't programmers like nature? It has too many bugs."
+    },
+    {
+        "id":33,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why don\u2019t skeletons fight each other? They don\u2019t have the guts."
+    },
+    {
+        "id":34,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Helvetica and Times New Roman walk into a bar. 'Get out!' shouts the bartender. 'We don't serve your type.'"
+    },
+    {
+        "id":35,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"Why can\u2019t you trust stairs? They\u2019re always up to something."
+    },
+    {
+        "id":36,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"My friend wants to become an archaeologist, but I'm trying to put him off. His life will be in ruins."
+    },
+    {
+        "id":37,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"Did you hear about the claustrophobic astronaut? He just needed a little space."
+    },
+    {
+        "id":38,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why don't eggs tell jokes? They'd crack each other up."
+    },
+    {
+        "id":39,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Did you hear about the mathematician who\u2019s afraid of negative numbers? He'll stop at nothing to avoid them."
+    },
+    {
+        "id":40,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why don't some couples go to the gym? Because some relationships don't work out."
+    },
+    {
+        "id":41,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"Why don't snowmen like carrot cake? Because it makes their snow-bellies carrot-shaped!"
+    },
+    {
+        "id":42,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"What do you call an old snowman? Water."
+    },
+    {
+        "id":43,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"Why was the snowman looking through the carrots? He was picking his nose!"
+    },
+    {
+        "id":44,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"What do snowmen eat for breakfast? Frosted flakes."
+    },
+    {
+        "id":45,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"Why don\u2019t mountains get cold in the winter? They wear snowcaps."
+    },
+    {
+        "id":46,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"What do you call a snowman with a six-pack? An abdominal snowman."
+    },
+    {
+        "id":47,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"How do snowmen get around? By riding an \u2018icicle."
+    },
+    {
+        "id":48,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"What's a snowman's favorite snack? Ice Krispies."
+    },
+    {
+        "id":49,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"Why did the snowman turn down a job offer? He couldn't handle the meltdown."
+    },
+    {
+        "id":50,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"What do you call an adventurous snowman? A snow explorer."
+    },
+    {
+        "id":51,
+        "culture":"South_African",
+        "category":"Winter",
+        "joke":"In South Africa, we don't need a weatherman to know it's winter. We just notice the surfers wearing wetsuits on both land and sea."
+    },
+    {
+        "id":52,
+        "culture":"Turkish",
+        "category":"Winter",
+        "joke":"Why do Turkish people never get cold in the winter? Because they have a warm heart and a hot cup of \u00e7ay!"
+    },
+    {
+        "id":53,
+        "culture":"Italian",
+        "category":"Winter",
+        "joke":"Why is winter in Italy the best season? Because even the gelato prefers to chill."
+    },
+    {
+        "id":54,
+        "culture":"Japanese",
+        "category":"Winter",
+        "joke":"What do you call a snowman in Tokyo? A Frosty Samurai!"
+    },
+    {
+        "id":55,
+        "culture":"Spanish",
+        "category":"Winter",
+        "joke":"Why don't Spanish people play hide and seek in the winter? Because good luck hiding when everyone's at the tapas bar!"
+    },
+    {
+        "id":56,
+        "culture":"North_American",
+        "category":"Winter",
+        "joke":"How do North Americans stay warm in winter? They tap into their inner 'chill' factor!"
+    },
+    {
+        "id":57,
+        "culture":"Japanese",
+        "category":"Winter",
+        "joke":"Why did the snowman in Kyoto refuse to melt? Because he found his Zen."
+    },
+    {
+        "id":58,
+        "culture":"Australian",
+        "category":"Winter",
+        "joke":"What's an Australian's favorite winter activity? Going to the beach and pretending it's summer!"
+    },
+    {
+        "id":59,
+        "culture":"Korean",
+        "category":"Winter",
+        "joke":"Why do Koreans love winter? Because it's kim-chilly!"
+    },
+    {
+        "id":60,
+        "culture":"French",
+        "category":"Winter",
+        "joke":"In France, how can you tell it's winter? The baguettes wear scarves."
+    },
+    {
+        "id":61,
+        "culture":"South_African",
+        "category":"Winter",
+        "joke":"What's a South African's winter motto? Keep calm and curry on!"
+    },
+    {
+        "id":62,
+        "culture":"Iranian",
+        "category":"Winter",
+        "joke":"Why do Iranians love winter? Because it's the perfect time for a warm cup of chai and a good story."
+    },
+    {
+        "id":63,
+        "culture":"North_American",
+        "category":"Winter",
+        "joke":"Why do North Americans love winter? Because it's the only time their refrigerators don't have to work overtime!"
+    },
+    {
+        "id":64,
+        "culture":"Brazilian",
+        "category":"Winter",
+        "joke":"In Brazil, winter is like a shy sunbather at the beach \u2013 it barely makes an appearance."
+    },
+    {
+        "id":65,
+        "culture":"Russian",
+        "category":"Winter",
+        "joke":"Why do Russians never get surprised by winter? Because in Russia, winter always finds you!"
+    },
+    {
+        "id":66,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Parallel lines have so much in common. It\u2019s a shame they\u2019ll never meet."
+    },
+    {
+        "id":67,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"I would tell you a construction joke, but I'm still working on it."
+    },
+    {
+        "id":68,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"Why can\u2019t you trust stairs? They\u2019re always up to something."
+    },
+    {
+        "id":69,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I have a joke about time travel, but you didn't like it."
+    },
+    {
+        "id":70,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I'm terrified of elevators, so I\u2019m going to start taking steps to avoid them."
+    },
+    {
+        "id":71,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I\u2019d tell you a chemistry joke but I know I wouldn\u2019t get a reaction."
+    },
+    {
+        "id":72,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I invented a new word: Plagiarism."
+    },
+    {
+        "id":73,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"Did you hear about the claustrophobic astronaut? He just needed a little space."
+    },
+    {
+        "id":74,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"My dog used to chase people on a bike a lot. It got so bad, I had to take his bike away."
+    },
+    {
+        "id":75,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"I would tell you a construction joke, but I'm still working on it."
+    },
+    {
+        "id":76,
+        "culture":"General",
+        "category":"Historical jokes",
+        "joke":"Why did the historian love winter? Because it was the best time to 'freeze' the moment."
+    },
+    {
+        "id":77,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"Why don't some books join the army? They hate the draft."
+    },
+    {
+        "id":78,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"What do you call a fish wearing a crown? A king salmon."
+    },
+    {
+        "id":79,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"Why did the employee bring a ladder to work during winter? He heard the job was up-snowing."
+    },
+    {
+        "id":80,
+        "culture":"General",
+        "category":"Family jokes",
+        "joke":"During winter, my family bonds so well; we stick together like snowflakes on a driveway."
+    },
+    {
+        "id":81,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why don't chocolates argue on Valentine's Day? Because they always know how to kiss and make up."
+    },
+    {
+        "id":82,
+        "culture":"North_American",
+        "category":"Valentine",
+        "joke":"Why was the chocolate box nervous on Valentine's? It was filled with butter-flies."
+    },
+    {
+        "id":83,
+        "culture":"Mexican",
+        "category":"Valentine",
+        "joke":"Why do chocolates never start diets before Valentine's? They know they're too sweet to resist."
+    },
+    {
+        "id":84,
+        "culture":"Brazilian",
+        "category":"Valentine",
+        "joke":"How do chocolates confess love in Brazil on Valentine's? They say, 'I'm coco-nuts about you!'"
+    },
+    {
+        "id":85,
+        "culture":"British",
+        "category":"Valentine",
+        "joke":"What did the chocolate say to its lover on Valentine's in Britain? 'You're tea-riffically sweet!'"
+    },
+    {
+        "id":86,
+        "culture":"French",
+        "category":"Valentine",
+        "joke":"In France, how do chocolates celebrate Valentine's? By saying, 'I find you choco-licious, mon amour!'"
+    },
+    {
+        "id":87,
+        "culture":"German",
+        "category":"Valentine",
+        "joke":"Why did the chocolate bring a pretzel to its Valentine in Germany? Because opposites a-tt-ract."
+    },
+    {
+        "id":88,
+        "culture":"Italian",
+        "category":"Valentine",
+        "joke":"What's a chocolate's favorite romantic spot in Italy on Valentine's? The Leaning Tower of Pisa, because they're both sweet and inclined."
+    },
+    {
+        "id":89,
+        "culture":"Spanish",
+        "category":"Valentine",
+        "joke":"Why do chocolates say on Valentine's in Spain? 'Te amo more than churros!'"
+    },
+    {
+        "id":90,
+        "culture":"Australian",
+        "category":"Valentine",
+        "joke":"What's a chocolate's favorite Valentine line in Australia? 'I love you more than a barbie on the beach!'"
+    },
+    {
+        "id":91,
+        "culture":"Indian",
+        "category":"Valentine",
+        "joke":"How do chocolates express affection on Valentine's in India? 'I love you more than all the spices in the market.'"
+    },
+    {
+        "id":92,
+        "culture":"Russian",
+        "category":"Valentine",
+        "joke":"What do chocolates in Russia say on Valentine's? 'You warm my heart more than vodka.'"
+    },
+    {
+        "id":93,
+        "culture":"Turkish",
+        "category":"Valentine",
+        "joke":"Why do Turkish chocolates make the best Valentine's gift? Because they're as sweet as Turkish delight."
+    },
+    {
+        "id":94,
+        "culture":"Iranian",
+        "category":"Valentine",
+        "joke":"How do chocolates in Iran celebrate Valentine's? 'With every bite, I'm more in love with you.'"
+    },
+    {
+        "id":95,
+        "culture":"Nigerian",
+        "category":"Valentine",
+        "joke":"What promise do chocolates make on Valentine's in Nigeria? 'To always stick by your side, through thick and thin layers.'"
+    },
+    {
+        "id":96,
+        "culture":"South_African",
+        "category":"Valentine",
+        "joke":"What do chocolates say on Valentine's in South Africa? 'You're my sweet safari adventure.'"
+    },
+    {
+        "id":97,
+        "culture":"Japanese",
+        "category":"Valentine",
+        "joke":"Why are chocolates the best Valentine's gift in Japan? Because they're the sweetest way to say 'I choo-choose you!'"
+    },
+    {
+        "id":98,
+        "culture":"Chinese",
+        "category":"Valentine",
+        "joke":"In China, what do chocolates say on Valentine's? 'Our love is as enduring as the Great Wall.'"
+    },
+    {
+        "id":99,
+        "culture":"Korean",
+        "category":"Valentine",
+        "joke":"Why do chocolates in Korea look forward to Valentine's? 'Because they love being Seoul-mates.'"
+    },
+    {
+        "id":100,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why did the chocolate bar give his sweetheart a map? Because he wanted to find his way to her heart!"
+    },
+    {
+        "id":101,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"What did the chocolate syrup say to the ice cream on Valentine's Day? 'I'm sweet on you!'"
+    },
+    {
+        "id":102,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why do chocolates make the best Valentine's gifts? Because they're sweet and always in good taste!"
+    },
+    {
+        "id":103,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"What did the piece of chocolate say to his valentine? 'We're mint to be!'"
+    },
+    {
+        "id":104,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why did the chocolate chip cookie break up with the marshmallow on Valentine's Day? He found her too s'more-ish!"
+    },
+    {
+        "id":105,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"What's a chocolate's favorite kind of music on Valentine's Day? Sweet jazz!"
+    },
+    {
+        "id":106,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why don't skeletons celebrate Valentine's Day? They have nobody to love."
+    },
+    {
+        "id":107,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"How do chocolates stay fit for Valentine's Day? By indulging in a little 'exer-sweets'!"
+    },
+    {
+        "id":108,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"What did the chocolate say to the Valentine's card? 'We're a perfect batch!'"
+    },
+    {
+        "id":109,
+        "culture":"General",
+        "category":"Valentine",
+        "joke":"Why did the chocolate give his girlfriend a bouquet of flowers? Because flowers are choco-lit!"
+    },
+    {
+        "id":110,
+        "culture":"General",
+        "category":"Winter",
+        "joke":"Why do winter jokes always get a cold reception? Because the punchlines are too chill."
+    },
+    {
+        "id":111,
+        "culture":"North_American",
+        "category":"Winter",
+        "joke":"What's a North American's favorite winter sport? Ice scrolling through their phones."
+    },
+    {
+        "id":112,
+        "culture":"Mexican",
+        "category":"Winter",
+        "joke":"Why don't Mexicans get cold in the winter? Because they have chili."
+    },
+    {
+        "id":113,
+        "culture":"Brazilian",
+        "category":"Winter",
+        "joke":"How do Brazilians find winter in their country? They search for it between the sunshine and the beach parties."
+    },
+    {
+        "id":114,
+        "culture":"British",
+        "category":"Winter",
+        "joke":"What's a British person's best winter activity? Queueing indoors for a cup of tea."
+    },
+    {
+        "id":115,
+        "culture":"French",
+        "category":"Winter",
+        "joke":"Why do French people love winter? Because it's the perfect time for a 'vin chaud' under the Eiffel Tower."
+    },
+    {
+        "id":116,
+        "culture":"German",
+        "category":"Winter",
+        "joke":"What do Germans use to cut the ice? 'Scharfe' wit and a gl\u00fchwein."
+    },
+    {
+        "id":117,
+        "culture":"Italian",
+        "category":"Winter",
+        "joke":"Why is winter in Italy so appealing? Because you can finally enjoy a hot espresso outdoors without sweating."
+    },
+    {
+        "id":118,
+        "culture":"Spanish",
+        "category":"Winter",
+        "joke":"What do Spaniards say about winter? It's the only time paella tastes better indoors."
+    },
+    {
+        "id":119,
+        "culture":"Australian",
+        "category":"Winter",
+        "joke":"What's an Australian's winter problem? Figuring out whether it's winter or just a slightly cooler summer."
+    },
+    {
+        "id":120,
+        "culture":"Indian",
+        "category":"Winter",
+        "joke":"Why do Indians look forward to winter? It's the only season they can enjoy a hot curry without feeling hotter outside."
+    },
+    {
+        "id":121,
+        "culture":"Russian",
+        "category":"Winter",
+        "joke":"Why don't Russians take winter seriously? Because to them, it's just a mild chill."
+    },
+    {
+        "id":122,
+        "culture":"Turkish",
+        "category":"Winter",
+        "joke":"What's winter called in Turkey? Just another reason for more tea."
+    },
+    {
+        "id":123,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"Why don't snowmen get lonely? Because they're cool with chilling alone."
+    },
+    {
+        "id":124,
+        "culture":"General",
+        "category":"Dad jokes",
+        "joke":"Why do winter jokes make me all warm inside? Because they're just snow funny."
+    },
+    {
+        "id":125,
+        "culture":"General",
+        "category":"Parody jokes",
+        "joke":"Winter in the internet age: 'I used to walk 10 miles in the snow to get to school. Now I just scroll.'"
+    },
+    {
+        "id":126,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"A snowman and a scarecrow are best friends because one cools down while the other chills out."
+    },
+    {
+        "id":127,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"Isn\u2019t it cool how during winter, everyone walks around like they\u2019re carrying invisible snowballs?"
+    },
+    {
+        "id":128,
+        "culture":"General",
+        "category":"Wordplay jokes",
+        "joke":"Why is winter a snowman\u2019s favorite time to read? Because it\u2019s the best time to curl up with a good brrr-book."
+    },
+    {
+        "id":129,
+        "culture":"General",
+        "category":"Animal jokes",
+        "joke":"Why do polar bears do so well in their exams during winter? Because they have ice in their veins."
+    },
+    {
+        "id":130,
+        "culture":"General",
+        "category":"Food jokes",
+        "joke":"Why don't you ever starve in the winter? Because of all the snowflakes you can catch with your tongue."
+    },
+    {
+        "id":131,
+        "culture":"General",
+        "category":"Doctor jokes",
+        "joke":"Doctor: 'You have a severe case of hypothermia.' Patient: 'At least it\u2019s cool to be cold.'"
+    },
+    {
+        "id":132,
+        "culture":"General",
+        "category":"Sports jokes",
+        "joke":"Winter sports are just ice-olated activities where everyone\u2019s cool with being frozen."
+    },
+    {
+        "id":133,
+        "culture":"General",
+        "category":"Travel jokes",
+        "joke":"Why don't maps like winter? Because the roads are all 'closed for the season.'"
+    },
+    {
+        "id":134,
+        "culture":"General",
+        "category":"Family jokes",
+        "joke":"During winter, my family huddles around the charger. It\u2019s the modern campfire."
+    },
+    {
+        "id":135,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"Why did the computer keep overheating during winter? It thought a bit of snow would 'cool' the system."
+    },
+    {
+        "id":136,
+        "culture":"General",
+        "category":"Historical jokes",
+        "joke":"Winter in history: 'The only time when knights were cold enough to stick to their armor.'"
+    },
+    {
+        "id":137,
+        "culture":"General",
+        "category":"Science jokes",
+        "joke":"Why do scientists like winter? Because it\u2019s the best time to study the state of matter\u2014solid ice."
+    },
+    {
+        "id":138,
+        "culture":"General",
+        "category":"Math jokes",
+        "joke":"Why was the equal sign so popular during winter? Because it knew how to balance the cold equations."
+    },
+    {
+        "id":139,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"Winter gives me an excuse to stay indoors. Not that I needed one, but now I have a season to blame."
+    },
+    {
+        "id":140,
+        "culture":"General",
+        "category":"Puns",
+        "joke":"I used to be a snowflake collector, but it was too flaky a hobby."
+    },
+    {
+        "id":141,
+        "culture":"General",
+        "category":"Dad jokes",
+        "joke":"Why do snowmen love the internet? For the frosty memes."
+    },
+    {
+        "id":142,
+        "culture":"General",
+        "category":"Parody jokes",
+        "joke":"If winter had a dating profile: 'Loves long nights, chilling out, and canceling plans at the last minute.'"
+    },
+    {
+        "id":143,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"A snowman ordered a hot chocolate. The bartender says, 'Are you sure?' The snowman replies, 'Yes, I'm feeling adventurous today.'"
+    },
+    {
+        "id":144,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"Isn't it great how in winter, the world decides to go black and white like an old movie?"
+    },
+    {
+        "id":145,
+        "culture":"General",
+        "category":"Animal jokes",
+        "joke":"What do you call a sheep covered in chocolate in winter? A candy baa."
+    },
+    {
+        "id":146,
+        "culture":"General",
+        "category":"Food jokes",
+        "joke":"Why did the tomato turn red in winter? Because it saw the salad dressing in snow!"
+    },
+    {
+        "id":147,
+        "culture":"General",
+        "category":"Doctor jokes",
+        "joke":"I told the doctor I felt like a snowman. He said to keep cool."
+    },
+    {
+        "id":148,
+        "culture":"General",
+        "category":"School jokes",
+        "joke":"School in winter is cool. Literally."
+    },
+    {
+        "id":149,
+        "culture":"General",
+        "category":"Travel jokes",
+        "joke":"Visited an igloo in winter. It was cool, but I couldn't get warm to the idea."
+    },
+    {
+        "id":150,
+        "culture":"General",
+        "category":"Family jokes",
+        "joke":"Family gatherings in winter are heartwarming, especially since we can't feel our toes."
+    },
+    {
+        "id":151,
+        "culture":"General",
+        "category":"Work jokes",
+        "joke":"Winter at the office is great. The chill outside matches the chill inside."
+    },
+    {
+        "id":152,
+        "culture":"General",
+        "category":"Historical jokes",
+        "joke":"Winter is like history. It repeats itself, and no one's prepared."
+    },
+    {
+        "id":153,
+        "culture":"General",
+        "category":"Science jokes",
+        "joke":"Winter is nature's way of showing us phase changes are cool."
+    },
+    {
+        "id":154,
+        "culture":"General",
+        "category":"One-liners",
+        "joke":"Why did the winter storm take a break? Because it needed to chill out."
+    },
+    {
+        "id":155,
+        "culture":"General",
+        "category":"Parody jokes",
+        "joke":"Winter asked Autumn to leave because it needed its space to chill."
+    },
+    {
+        "id":156,
+        "culture":"General",
+        "category":"Absurdist humor",
+        "joke":"A snowflake\u2019s favorite Shakespeare quote: 'To freeze or not to freeze.'"
+    },
+    {
+        "id":157,
+        "culture":"General",
+        "category":"Observational humor",
+        "joke":"Isn't it funny how we never see snowmen at the beach? Winter's exclusive party guests."
+    },
+    {
+        "id":158,
+        "culture":"General",
+        "category":"Wordplay jokes",
+        "joke":"If April showers bring May flowers, what do May flowers bring? Pilgrims. And what do Pilgrims bring? Winter coats."
+    },
+    {
+        "id":159,
+        "culture":"General",
+        "category":"Animal jokes",
+        "joke":"Why don\u2019t polar bears get married in winter? Because they get cold feet."
+    },
+    {
+        "id":160,
+        "culture":"General",
+        "category":"Doctor jokes",
+        "joke":"Why do doctors make the worst snowmen? Because they have cold hands."
+    },
+    {
+        "id":161,
+        "culture":"General",
+        "category":"Technology jokes",
+        "joke":"Why did the smartphone wear a scarf? Because it lost its jack and didn\u2019t want to catch a cold."
+    }
+]

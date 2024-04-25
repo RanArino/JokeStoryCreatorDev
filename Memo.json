@@ -1,0 +1,93 @@
+{
+    "creative_joke_generation_test": {
+        "ID": 999,
+        "triggers": "Activated 'Code 999'.",
+        "objectives": "Generate the uniqye jokes and execute PUT request for 'GPTs' branch",
+        "rules": [
+            "Precisely adhere to the instructions.",
+            "Conduct GET request and PUT request for data.json file."
+        ],
+        "actions": {
+            "outlines": {
+                "process_id": 1,
+                "references": {
+                    "file_name": "Dev_Instructions.json",
+                    "dictionary_key": "joke_creation_settings",
+                    "ID": "000"
+                },
+                "rules": "No need to display the retrieved processes.",
+                "constraints": {
+                    "hidden_operations": true,
+                    "no_output_displayed": true
+                },
+                "actions": "Retrieve and understand processes of joke creation outlined in 'references'."
+            },
+            "current_data": {
+                "process_id": 2,
+                "objectives": "Recognize the current data to prevent the System to generate the duplicated content of jokes.",
+                "references": {
+                    "request": "GET",
+                    "path": "JokeStoryCreator/Developer/data.json",
+                    "branch": "main"
+                },
+                
+                "actions": "Execute 'GetData' action of GitHub API based on 'references'."
+            },
+            "unique_joke": {
+                "process_id": 3,
+                "objectives": "Generate creative and unique jokes based on the given list of prompts.",
+                "rules": [
+                    "Follow the 'outline' components to generate each joke.",
+                    "Avoid any duplicate content of jokes compared to the 'joke' column of the 'current_data'.",
+                    "Regererate the joke automatically if the System found exactly the same joke.",
+                    "Execute all the given prompts hiddenly."
+                ],
+                "constraints": {
+                    "hidden_operations": true,
+                    "no_output_displayed": true
+                },
+                "actions": "Generate the creative and unique jokes."
+            },
+            "latest_SHA_value": {
+                "process_id": 4,
+                "objectives": "Retrieve the latest SHA value to execute PUT request.",
+                "references": {
+                    "request": "GET",
+                    "path": "JokeStoryCreator/Developer/data.json",
+                    "branch": "GPT"
+                },
+                "action": "Execute the GetData action of GitHub API based on 'references'."
+            },
+            "commit_changes": {
+                "process_id": 5,
+                "objectuve": "Update the current data.json file.",
+                "references": {
+                    "request": "PUT",
+                    "path": "JokeStoryCreator/Developer/data.json",
+                    "branch": "GPT"
+                },
+                "variables": {
+                    "id": "integer: make sure that unique id maintains the sequential order from the existing data.",
+                    "region": "string: retrieved from the user query.",
+                    "category": "string; retrieved from the usre query.",
+                    "joke": "string; assigned the generated joke."
+                },
+                "examples": {
+                    "id":"integer: make sure that unique id maintains the sequential order from the existing data.",
+                    "region": "string: retrieved from the user query.",
+                    "category": "string; retrieved from the usre query.",
+                    "joke": "string; assigned the generated joke.",
+                    "description":null,
+                    "n1":null, "n2":null, "n3":null, "n4":null,
+                    "d1_1":null, "d1_2":null, "d2_1":null, "d2_2":null,
+                    "d3_1":null, "d3_2":null, "d4_1":null, "d4_2":null
+                },
+                "rules": [
+                    "Assign values to only four components and assign null value for others, outlined 'examples'.",
+                    "Make sure to encode the revised JSON format file before the PUT request."
+                ],
+                "actions": "Execure the PUT request for correct file outlined in 'references'."
+            }
+        }
+    }
+}

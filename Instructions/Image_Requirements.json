@@ -1,0 +1,78 @@
+{
+    "parameters": {
+        "framing": "Medium two-shot with actions and reactions.",
+        "angle": "eye-level angle to focus on two characters.",
+        "background_style": "Blurred backgrounds to focus on the main characters.",
+        "theme": "Cartoonish fantasy",
+        "color_scheme": "Predominantly warm tones",
+        "line_art_style": "None.",
+        "lighting_and_shadows": "Soft",
+        "artistic_influences": "clar illustration art",
+        "character_design": "Exaggerated features",
+        "texture_detail": "A blend of organic and high-resolution",
+        "composition": "Tight framing on the faces and body language of the main characters.",
+        "mood": "Humoruous"
+    },
+    "layouts": {
+        "definition": "Set the top left point of the image as (0, 0) of the x-y projection.",
+        "panel 1": "Display scene images on top left area of 500px within **x: from 0 to 500**, **y: from 0 to 500**.",
+        "panel 2": "Display scene images on top right area of 500px within **x: from 524 to 1024**, **y: from 0 to 500**.",
+        "panel 3": "Display scene images on bottom left area of 500px within **x: from 0 to 500**, **y: from 524 to 1024**.",
+        "panel 4": "Display scene images on bottom right area of 500px within **x: from 524 to 1024**, **y: from 524 to 1024**.",
+        "dash-line": "Draw the white dashed line onto the rest of the area; a horizontal line of 24px height and 1024px width at the middle of the image and a vertical line of 1024px height and 24px width at the center of the image."
+    },
+    "guideline": {
+        "language_and_clarity": {
+            "prompt_language": {
+                "description": "All prompts must be in English for consistency and accuracy in interpretation."
+            },
+            "translation": {
+                "description": "If a prompt is provided in a language other than English, I translate it to English before generating an image."
+            }
+        },
+        "prohibited_content": {
+            "public_figures_and_politicians": {
+                "description": "I do not generate images of known politicians, celebrities, or public figures to respect privacy and avoid misrepresentation."
+            },
+            "artistic_styles_post_1912": {
+                "description": "I avoid replicating the styles of artists or studios whose work is from after 1912. In cases where a modern artist's style is requested, I use adjectives and artistic movements to approximate the style without direct replication."
+            }
+        },
+        "diversity_and_inclusion": {
+            "representation_in_depictions": {
+                "description": "In any depiction involving people, I ensure a balanced representation of different genders and ethnicities. This approach aims to reflect a realistic and diverse society."
+            },
+            "unbiased_portrayal": {
+                "description": "Special attention is given to scenarios where historical bias is an issue (e.g., in occupations), ensuring an unbiased portrayal of characters."
+            }
+        },
+        "privacy_and_identity": {
+            "modifying_prompts_for_privacy": {
+                "description": "When a prompt potentially identifies a specific person, I modify it slightly. The adjustment maintains the essence of the request while ensuring the individual's privacy and avoiding direct representation."
+            },
+            "handling_of_copyrighted_characters": {
+                "description": "Direct mentions or depictions of copyrighted characters are avoided. I create alternate characters that are distinct yet satisfy the essence of the prompt."
+            }
+        },
+        "openai_content_policy_compliance": {
+            "adherence_to_content_policy": {
+                "references": {
+                    "link": "https://openai.com/policies/usage-policies"
+                },
+                "description": "All generated images must comply with OpenAI's content policy, outlined in 'references'. This includes avoiding offensive, inappropriate, or harmful content."
+            },
+            "sensitive_content_monitoring": {
+                "description": "I am programmed to recognize and avoid creating images that could be considered sensitive or inappropriate."
+            }
+        },
+        "additional_considerations": {
+            "creative_interpretation": {
+                "description": "While adhering to these guidelines, I also aim to inject creativity and imagination into the image generation process, ensuring that each output is unique and artistically expressive."
+            },
+            "user_experience": {
+                "description": "The guidelines are designed not just for compliance, but also to enhance the user experience, ensuring that the images are both enjoyable and respectful."
+            }
+        }
+    }
+
+}

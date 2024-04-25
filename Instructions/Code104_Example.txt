@@ -1,0 +1,13 @@
+``` txt
+<video_descript>insert an engaging video description by using emojis at least 50 words no more than 100 words</video_descript>
+
+🏫 English Explanation 🗣️: 
+1. <word1>insert the first English expression</word1>: <word1_descript>insert the brief description of the first English expression</word1_descript>
+2. <word2>insert the second English expression</word2>: <word2_descript>insert the brief description of the second English expression</word2_descript>
+3. <word3>insert the third English expression</word3>: <word3_descript>insert the brief description of the third English expression</word3_descript>
+4. <word4>insert the forth English expression</word4>: <word4_descript>insert the brief description of the forth English expression</word4_descript>
+5. <word5>insert the fifth English expression</word5>: <word5_descript>insert the brief description of the fifth English expression</word5_descript>
+
+<hashtags>insert the relevant, popular, and short 5 hashtags related to the story</hashtags>
+#shorts #LearnEnglish #StudyEnglish #Humor #Funny #Joke #ShortStory #1min #Anglais #AprenderInglés #ingles #英語学習 #英語 #学英语 #英语学习 #영어학습지
+```

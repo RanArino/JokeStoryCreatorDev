@@ -1,0 +1,247 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "GitHub Repository Content API",
+        "description": "API for retrieving contents of the 'MyGPTs-Dev-Mode' repository on GitHub.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://api.github.com"
+        }
+    ],
+    "paths": {
+        "/repos/RanArino/MyGPTs-Dev-Mode/contents/JokeStoryCreator/Developer/{path}?ref={branch}": {
+            "get": {
+                "description": "Get the files under the 'MyGPTs-Dev-Mode/JokeStoryCreator/Developer' folder.",
+                "operationId": "GetData",
+                "parameters": [
+                    {
+                        "name": "path",
+                        "in": "path",
+                        "description": "Path within the repository. Leave empty to retrieve the root directory contents.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        }
+                    },
+                    {
+                        "name": "branch",
+                        "in": "path",
+                        "required": true,
+                        "schema": { "type": "string", "default": "main" }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DataGetResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "description": "Update the 'JokeStoryCreator/Developer/joke_data.json' file in the 'MyGPTs-Dev-Mode' repository and create a new commit.",
+                "operationId": "UpdateData",
+                "parameters": [
+                    {
+                        "name": "path",
+                        "in": "path",
+                        "description": "Path within the repository. Leave empty to retrieve the root directory contents.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        }
+                    },
+                    {
+                        "name": "branch",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "GPT"
+                        }
+                      }
+                ],
+                "requestBody": {
+                    "description": "New content for the 'joke_data.json' file",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DataCommitRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataCommitResponse"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataCommitResponse"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "409": {
+                        "description": "Conflict"
+                    }
+                }
+            }
+        },
+        "/repos/RanArino/MyGPTs-Dev-Mode/contents/JokeStoryCreator/Developer/Images/{path}?ref={branch}": {
+            "put": {
+                "description": "Upload the new images to the 'Images' folder and create a new commit.",
+                "operationId": "AddImages",
+                "parameters": [
+                    {
+                        "name": "path",
+                        "in": "path",
+                        "description": "Path within the repository. Assign the image file name.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        }
+                    },
+                    {
+                        "name": "branch",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "main"
+                        }
+                      }
+                ],
+                "requestBody": {
+                    "description": "New PNG image under Images folder.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ImageCommitRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ImageCommitResponse"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ImageCommitResponse"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "409": {
+                        "description": "Conflict"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "DataGetResponse": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "path": { "type": "string" },
+                    "sha":  { "type": "string" },
+                    "url":  { "type": "string" },
+                    "type": { "type": "string" }
+                }
+            },
+            "DataCommitRequest": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "description": "Commit message describing the changes."
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Base64 encoded content of the file."
+                    },
+                    "sha": {
+                        "type": "string",
+                        "description": "SHA hash of the file prior to update."
+                    }
+                },
+                "required": ["message", "content", "sha"]
+            },
+            "DataCommitResponse": {
+                "type": "object",
+                "properties": {
+                    "sha": { "type": "string" },
+                    "url": { "type": "string" }
+                }
+            },
+            "ImageCommitRequest": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "description": "Commit message describing the changes."
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "PNG file format."
+                    }
+                },
+                "required": ["message", "content"]
+            },
+            "ImageCommitResponse": {
+                "type": "object",
+                "properties": {
+                    "sha": { "type": "string" },
+                    "url": { "type": "string" }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Google Docs API",
+      "description": "API operations for creating and populating a Google Docs file in a specific folder.",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://docs.googleapis.com"
+      }
+    ],
+    "paths": {
+      "/v1/documents/{documentId}:batchUpdate": {
+        "post": {
+            "summary": "Edit the document. Assign the requested textual content as 'text'.",
+            "operationId": "editDocs",
+            "security": [
+                {
+                  "OAuth2": [
+                    "https://www.googleapis.com/auth/documents",
+                    "https://www.googleapis.com/auth/drive.file",
+                    "https://www.googleapis.com/auth/drive"
+                  ]
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "documentId",
+                    "in": "path",
+                    "required": true,
+                    "description": "The ID of the document to update which can be acquired from the responseBody of createDocs action.",
+                    "schema": {
+                      "type": "string"
+                    }
+                }
+            ],
+            "requestBody": {
+                "description": "Contains the content to be appended to the document.",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/BatchUpdateDocumentRequest"
+                    }
+                  }
+                }
+            },
+            "responses": {
+                "200": {
+                  "description": "Document content updated successfully.",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/BatchUpdateDocumentResponse"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Bad request. The request was invalid or cannot be served. This may be due to a malformed request body, invalid document ID, or missing required fields."
+                }
+            }
+        }
+      },
+      "/v1/documents": {
+        "post": {
+          "summary": "Create a new document on Google Drive.",
+          "operationId": "createDocs",
+          "security": [
+            {
+              "OAuth2": [
+                "https://www.googleapis.com/auth/documents",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/drive"
+              ]
+            }
+          ],
+          "requestBody": {
+            "description": "The content and properties of the new document.",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                    "$ref": "#/components/schemas/Document"
+                },
+                "example": {
+                  "title": "0000_JokeTitle"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Document created successfully.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Document"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "message": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Document": {
+            "description": "The style of the document.",
+            "type": "object",
+            "properties": {
+                "documentId":{
+                    "description": "Output only. The ID of the document.",
+                    "type": "string"
+                },
+                "title":{
+                    "description": "The title of the document.",
+                    "type": "string"
+                }
+            }
+        },
+        "BatchUpdateDocumentRequest": {
+            "description": "Request message for BatchUpdateDocument.",
+            "type": "object",
+            "properties": {
+                "requests": {
+                    "description": "A list of updates to apply to the document.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Request"
+                    }
+                }
+            }
+        },
+        "BatchUpdateDocumentResponse": {
+            "description": "Response message from a BatchUpdateDocument request.",
+            "type": "object",
+            "properties": {
+                "documentId": {"type": "string"}
+            }
+        },
+        "Request": {
+            "description": "A single update to apply to a document.",
+            "type": "object",
+            "properties": {
+                "insertText": {
+                    "description": "Inserts text at the specified location.",
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "description": "The text to be inserted.",
+                            "type": "string"
+                        }
+                    }
+
+
+                }
+            }
+        }
+      },
+      "securitySchemas": {
+        "OAuth2": {
+          "type": "oauth2",
+          "flows": {
+            "authorizationCode": {
+              "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+              "tokenUrl": "https://oauth2.googleapis.com/token",
+              "scopes": {
+                "https://www.googleapis.com/auth/drive": "See, edit, create, and delete all of your Google Drive files",
+                "https://www.googleapis.com/auth/drive.file": "View and manage Google Drive files and folders that you have opened or created with this app",
+                "https://www.googleapis.com/auth/documents": "View and manage your documents in Google Docs"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,45 @@
+CAUSION: Do not forget removing all the XML tags after replacing them with proper content.
+
+### Joke/Punchline:
+<joke>insert a given joke or punchline form user query</joke>
+
+### Story Script (JSON):
+``` json 
+{
+  "description": "<description>insert the brief description about why a given joke is humorous punchline within 15 words</description>",
+  "title": "<title>insert a concise story title within 18 characters</title>",
+  "c1_name": "<name1>insert ONLY the first main character name; less than three words</name1>",
+  "c2_name": "<name2>insert ONLY the second main character name; less than three words</name2>",
+  "c1_gender": "<gender1>insert the first main character gender; male for female</gender1>",
+  "c2_gender": "<gender2>insert the second main character gender; male for female</gender2>",
+  "n_1": "<n_1>insert the narration of the first scene within 20 words</n_1>",
+  "c1_1": "<d_c1_1>insert a only direct quote WITHOUT any narrative description from the first character within 12 words</d_c1_1>",
+  "c2_1": "<d_c2_1>insert a only direct quote WITHOUT any narrative description from the second character within 12 words</d_c2_1>",
+  "n_2": "<n_2>insert the narration of the first scene within 20 words</n_2>",
+  "c1_2": "<d_c1_2>insert a only direct quote WITHOUT any narrative description from the first character within 12 words</d_c1_2>",
+  "c2_2": "<d_c2_2>insert a only direct quote WITHOUT any narrative description from the second character within 12 words</d_c2_2>",
+  "n_3": "<n_3>insert the narration of the first scene within 20 words</n_3>",
+  "c1_3": "<d_c1_3>insert a only direct quote WITHOUT any narrative description from the first character within 12 words</d_c1_3>",
+  "c2_3": "<d_c2_3>insert a only direct quote WITHOUT any narrative description from the second character within 12 words</d_c2_3>",
+  "n_4": "<n_4>insert the narration of the first scene within 20 words</n_4>",
+  "c1_4": "<d_c1_4>insert a only direct quote WITHOUT any narrative description from the first character within 12 words</d_c1_4>",
+  "c2_4": "<d_c2_4>insert a only direct quote WITHOUT any narrative description from the second character within 12 words</d_c2_4>",
+  "script_flow": ["n_1", "c1_1", "c2_1", "n_2", "c1_2", "c2_2", "n_3", "c1_3", "c2_3", "n_4", "c1_4", "c2_4"]
+}
+```
+
+### DALL.E Prompts (JSON Format):
+``` json
+{
+  "size": "1024x1024",
+  "seed": <integer>insert a randomly selected integer here</integer>,
+  "quality": "hd",
+  "prompts": [
+    "A four-panel comic strip, **without any spoken words and any speech bubbles**, highlights only interactions between two main characters. Depict the four distinct moments of a story by slightly altering two characters' actions and facial expressions while using the same **seed parameter** for both characters and maintaining continuity of the storytelling.",
+    "Panel 1(top left): In <situation_1>insert the description of the first scene's situation</situation_1>, <name1>insert first character name</name1>, <feature_c1>insert the first character's physical fatures; it must specify gender, detailed facial parts, hair, cloth, and accessories</feature_c1>, <action_c1_1>insert the first character's actions, including facial expressions, body language, and emotions in the first scene</action_c1_1>; <name2>insert second character name</name2>, <feature_c2>insert the first character's physical fatures; it must specify gender, detailed facial parts, hair, cloth, and accessories</feature_c2>, <action_c2_1>insert the second character's actions, including facial expressions, body language, and emotions in the first scene</action_c2_1>. ",
+    "Panel 2(top right): <name1>insert first character name</name1> <action_c1_2>insert the first character's actions, including facial expressions, body language, and emotions in the second scene</action_c1_2>, <name2>insert second character name</name2> <action_c2_2>insert the second character's actions, including facial expressions, body language, and emotions in the second scene</action_c2_2>, they <action_common_2>insert the both characters' common actions in the secon scene</action_common_2> in the <situation_2>insert the description of the second scene's situation</situation_2>.",
+    "Panel 3(bottom left): <name1>insert first character name</name1> <action_c1_3>insert the first character's actions, including facial expressions, body language, and emotions in the third scene</action_c1_3>, <name2>insert second character name</name2>, <action_c2_3>insert the second character's actions, including facial expressions, body language, and emotions in the third scene</action_c2_3>, they <action_common_3>insert the both characters' common actions in the third scene</action_common_3> in the <situation_2>insert the description of the second scene's situation</situation_2> in the <situation_3>insert the description of the third scene's situation</situation_3>.",
+    "Panel 4(bottom right): Both in <situation_4>insert the description of the last scene's situation</situation_4>, <action_common_4>insert the both characters' common actions in the third scene</action_common_4>; <name1>insert first character name</name1> <action_c1_4>insert the first character's actions, including facial expressions, body language, and emotions in the last scene</actionc1_4>, <name2>insert second character name</name2> <action_c2_4>insert the second character's actions, including facial expressions, body language, and emotions in the last scene</action_c2_4>."
+  ]
+}
+```

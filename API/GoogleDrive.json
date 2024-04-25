@@ -1,0 +1,176 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Google Drive API",
+    "description": "API operations for creating and populating a Google Docs file in a specific folder.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://www.googleapis.com"
+    }
+  ],
+  "paths": {
+    "/drive/v3/files": {
+      "get":{
+        "operationId": "getFiles",
+        "summary": "Get Document IDs in a Specific Folder",
+        "description": "Retrieves the list of document IDs located within the specified folder.",
+        "security":[
+          {
+            "OAuth2": [
+              "https://www.googleapis.com/auth/documents",
+              "https://www.googleapis.com/auth/drive.file",
+              "https://www.googleapis.com/auth/drive"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "A query for filtering the file results. See the 'Search for files & folders' guide for supported syntax.",
+            "schema": {
+              "type": "string",
+              "default": "mimeType='application/vnd.google-apps.document' and trashed=false and '1FKQa5QuHeDidQMLIlMqad77KLCmr9WOG' in parents"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/File"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/drive/v3/files/{fileId}": {
+      "patch": {
+        "summary": "Move a specific file into the folder '1FKQa5QuHeDidQMLIlMqad77KLCmr9WOG'.",
+        "operationId": "moveFile",
+        "security": [
+          {
+            "OAuth2": [
+              "https://www.googleapis.com/auth/documents",
+              "https://www.googleapis.com/auth/drive.file",
+              "https://www.googleapis.com/auth/drive"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "fileId",
+            "description": "The ID of the file.",
+            "required": true,
+            "in": "path",
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "addParents",
+            "in": "query",
+            "schema": { 
+              "type": "string",
+              "enum": ["1FKQa5QuHeDidQMLIlMqad77KLCmr9WOG"],
+              "default": "1FKQa5QuHeDidQMLIlMqad77KLCmr9WOG"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "$ref": "#/components/schemas/File"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json":{
+                "schema": {
+                  "$ref": "#/components/schemas/File"
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "File": {
+        "description": "The metadata for a file.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The ID of the file",
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the file.",
+            "type": "string"
+          },
+          "parents": {
+            "description": "The IDs of the parent folders which contain the file.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "createdTime": {
+            "description": "The time at which the file was created",
+            "format": "date-time",
+            "type": "string"
+          },
+          "mimeType": {
+            "description": "The MIME type of the file. Only allow google docs.",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemas": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+            "tokenUrl": "https://oauth2.googleapis.com/token",
+            "scopes": {
+              "https://www.googleapis.com/auth/drive": "See, edit, create, and delete all of your Google Drive files",
+              "https://www.googleapis.com/auth/drive.file": "View and manage Google Drive files and folders that you have opened or created with this app",
+              "https://www.googleapis.com/auth/documents": "View and manage your documents in Google Docs"
+            }
+          }
+        }
+      }
+    }
+  }
+}

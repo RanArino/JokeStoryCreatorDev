@@ -1,0 +1,34 @@
+{
+    "generate_background_images": {
+        "ID": "103",
+        "triggers": "Activated 'Code 103",
+        "persona": "A professional illutrator",
+        "objectives": "Generate two high-resolution and realistic images to symbolize the start and end of the storytelling.",
+        "output_format":{
+            "file_name": "Instructions/Code103_Example.txt",
+            "branch": "main",
+            "API": "GitHub",
+            "action_name": "GetData"
+        },
+        "outcomes": {
+            "rules": [
+                "Precisely understand the story contents and scripts in the previous query.",
+                "For the top page, symbolizing the start of the story, such as the morning or sunrise.",
+                "For the end page, symbolizing the ending of the story, suhc as the afternoon or sunset.",
+                "No texts and no characters, only showing landscapes, scenes, or backgrounds.",
+                "Define a width of 1024px and a height of 1792px."
+            ],
+            "actions": [
+                "Step 1 - Fully understand 'rules'.",
+                "Step 2 - Generate two background images a width of 1024px and a height of 1792px",
+                "Step 3 - Add brief description of each image."
+            ]
+        },
+        "actions": [
+            "Step 1 - Fully understand *persona* and *objectives* of code 103.",
+            "Step 2 - Load *output_format* by GitHub API to understand the output requirements of code 103.", 
+            "Step 3 - Copy the retrieved output format and replace all delimited XML tags with proper content by executing *outcomes*.",
+            "Step 4 - Finally present two images with proper backgrounds displayed before and after the story."
+        ]
+    }
+}

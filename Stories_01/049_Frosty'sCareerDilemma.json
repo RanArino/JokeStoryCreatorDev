@@ -1,0 +1,23 @@
+{
+    "description": "This narrative humorously portrays the dilemma faced by Frosty, a snowman, who is deliberating over a job offer, while seeking counsel from his companion, Benny the rabbit.",
+    "title": "Frosty's Career Dilemma",
+    "c1_name": "Frosty",
+    "c2_name": "Benny",
+    "c1_gender": "male",
+    "c2_gender": "female",
+    "n_1": "Frosty is presented with a professional opportunity but grapples with uncertainty.",
+    "c1_1": "I am uncertain whether accepting this employment is advisable, Benny.",
+    "c2_1": "What might be the grounds for your uncertainty, Frosty?",
+    "n_2": "Benny attentively lends an ear as Frosty elucidates his apprehensions.",
+    "c1_2": "I am apprehensive about facing a potential workplace crisis.",
+    "c2_2": "Indeed, that is a legitimate concern for a snowman!",
+    "n_3": "Benny endeavors to uplift Frosty's spirits.",
+    "c1_3": "Perhaps I am inherently unsuited for this role.",
+    "c2_3": "No need to be disheartened; you will discover a more suitable opportunity!",
+    "n_4": "Frosty's countenance brightens, and he becomes more resolute about his choice.",
+    "c1_4": "Thank you, Benny. I shall continue my quest!",
+    "c2_4": "I have every confidence in your success, Frosty!",
+    "script_flow": ["n_1", "c1_1", "c2_1", "n_2", "c1_2", "c2_2", "n_3", "c1_3", "c2_3", "n_4", "c1_4", "c2_4"],
+    "id": 49,
+    "image_id": "tbgkP1V53uulNSsi"
+}

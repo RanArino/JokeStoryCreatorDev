@@ -1,0 +1,13 @@
+CAUSION: Do not forget removing all the XML tags after replacing them with proper content.
+
+### Image Prompts:
+``` txt
+<descript>insert the very brief description of the top page image</descript>.
+
+<descript>insert the very brief description of the end page image</descript>.
+```
+
+### Image Generations
+<image>attach the generated top page image with a width of 1024px and a height of 1792px</image>
+
+<image>attach the generated end page image with a width of 1024px and a height of 1792px</image>
