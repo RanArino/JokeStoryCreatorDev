@@ -1128,8 +1128,8 @@ class GoogleAPI:
 
         print("Success: New Docs Created")
 
-        # Return the document ID and URL for further operations or verification
-        return document.get('id')
+        # Return the dictionary of name and document ID
+        return {name: document.get('id')}
 
     def get_doc_content(self, document_id: str):
         # Retrieve the content of a Google Docs document
