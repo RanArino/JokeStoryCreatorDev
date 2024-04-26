@@ -2,6 +2,7 @@
 import cv2
 from datetime import datetime, timedelta
 import json
+import matplotlib.pyplot as plt
 import numpy as np
 import os
 from openai import OpenAI
@@ -243,7 +244,7 @@ class JokeStory:
             return {"status": "fail", "message": "Nothing Files"}
             
         # rename file
-        desire_file = f"C:/Users/runru/MyGPTs/MyGPTs-Dev-Mode/JokeStoryCreator/Developer/Images/{d_file}"
+        desire_file = f"C:/Users/runru/MyGPTs/JokeStoryCreatorDev/Images/{d_file}"
         # check no duplication
         if os.path.exists(desire_file):
             print("Fail: Image Preprocessing")
@@ -271,13 +272,13 @@ class JokeStory:
 
 
 class Video:
-    def __init__(self, path: str = 'joke_data.json', size: tuple = (1080, 1920)):
+    def __init__(self, JS, size: tuple = (1080, 1920)):
         self.size = size  # video size; (width, height)
-        self.JS = JokeStory(path)  # JokeStory class
+        self.JS = JS  # JokeStory class
 
         # load api key
-        with open('../../api_keys.yml', 'r') as file:
-            key = yaml.safe_load(file)["api_keys"]["openai_JokeDev"]
+        with open('API/api_keys.yml', 'r') as file:
+            key = yaml.safe_load(file)["openai"]
         
         self.client = OpenAI(api_key=key)  # OpenAI API
 
@@ -288,7 +289,11 @@ class Video:
         #self.model.load_state_dict(torch.load(model_path, map_location=self.device), strict=True)
 
 
-    def generate_video(self, id_list: list = [], t_interval: int = 60, fps: int = 24, return_: bool = False, specials: dict = {}, crop_mode: str = 'auto'):
+    def generate_video(self, id_list: list = [], t_interval: int = 60, fps: int = 24, specials: dict = {}, crop_mode: dict = {}):
+        # if crop_mode is blank, create default
+        if not crop_mode:
+            crop_mode = {int(i): 'auto' for i in id_list}
+
         # assign speciality
         self.specials = specials
 
@@ -306,7 +311,9 @@ class Video:
             images_name = {name.split('.')[0] for name in images_files}
             videos_name = {name.split('.')[0] for name in videos_files}
             # get the file name that did not create the video
-            create_video_name = images_name - videos_name
+            create_video_name = list(images_name - videos_name)
+            # redefine crop_mode
+            crop_mode = {int(name.split("_")[0]): 'auto' for name in create_video_name}
 
         else:
             # scan the directory
@@ -314,6 +321,8 @@ class Video:
                 create_video_name = [entry.name.split('.')[0] for entry in entries 
                                     if any(entry.name.startswith(f'{i:03}_') for i in id_list)]        
 
+        # track generated video names
+        success_video_names = []
         # traversing all image sources to create videos
         for name in create_video_name:
             if f"{name}.mp4" in videos_files:
@@ -328,7 +337,8 @@ class Video:
             # the main image (four-panel strip)
             image_path = f"Images/{name}.png"
             # get the cropped panels
-            cropped_panels = self.auto_crop_comic_strip(image_path, mode=crop_mode)
+            id_digit = int(name.split("_")[0])
+            cropped_panels = self.auto_crop_comic_strip(image_path, mode=crop_mode[id_digit])
 
             # clips for each component
             clips = [
@@ -351,11 +361,13 @@ class Video:
             # loading video as mp4
             final_video.write_videofile(f"Videos/{name}.mp4", fps=fps, codec="libx264", audio_codec="aac")
 
+            # add generated video name
+            success_video_names.append(name)
+
             # define time intervala
             time.sleep(t_interval)
 
-            if return_:
-                return clips, final_video
+        return success_video_names
 
 
     def title_clips(self, id_: int, story: dict, img: np.ndarray, title_t: float = 5., trans_t: float = 1.):
@@ -830,6 +842,35 @@ class Video:
         return cropped_image
 
 
+    def image_crop_test(self, img_path: list):
+        # Simply test the image cropping
+        for path in img_path:
+            cropped = self.auto_crop_comic_strip(path, mode='auto')  # 'auto' or 'manual'
+            
+            # Create a figure that can accommodate both the layouts of fig1 and fig2
+            fig3, axs = plt.subplots(2, 3, figsize=(8, 5))  # Creating a 2x3 grid overall
+            fig3.suptitle(path)
+
+            # The first four subplots (2x2) at indices 0, 1, 3, 4 of a 2x3 grid
+            for i in range(4):
+                ax = axs[i // 2, i % 2]  # Positioning subplots in a 2x2 configuration within the 2x3 grid
+                ax.imshow(cropped[i])
+                ax.set_title(f"Scene{i+1}", fontsize=10)
+                ax.set_xticks([])
+                ax.set_yticks([])
+
+            # The last two subplots (1x2)
+            # two images (last and first panel) are processed for the important part
+            for j, img_idx in enumerate([-1, 0]):
+                ax = axs[j, 2]  # Positioning in the top right and bottom right
+                ax.imshow(self.crop_important_part_to_scale(cropped[img_idx]))
+                ax.set_title("Title" if j==0 else 'End', fontsize=10)
+                ax.set_xticks([])
+                ax.set_yticks([])
+
+            plt.show()
+
+
     # def image_resolution(self, img_path: str = '', target_size: tuple = (), img_save: bool = False, new_img_path: str = '', chunk_size: int = 128, overlap: int = 16):
     #     img = cv2.imread(img_path)
     #     # Convert from BGR to RGB
@@ -1090,7 +1131,7 @@ class GoogleAPI:
         # Return the document ID and URL for further operations or verification
         return document.get('id')
 
-    def get_document_content(self, document_id: str):
+    def get_doc_content(self, document_id: str):
         # Retrieve the content of a Google Docs document
         doc = self.docs.documents().get(documentId=document_id).execute()
         # Extract text content from the document
@@ -1191,7 +1232,7 @@ class GoogleAPI:
             
             return {"status": "error", "message": str(e)}
 
-    def generate_future_dates(self, input_times: list, num_dates: int = 10, publish_times: list = ['T12:00:00Z', 'T13:00:00Z'], include_weekends: bool = False):
+    def get_new_schedules(self, input_times: list, num_videos: int = 10, publish_times: list = ['T12:00:00Z', 'T13:00:00Z'], include_weekends: bool = False):
         # Convert input string times to datetime objects
         dates = [datetime.strptime(time, '%Y-%m-%dT%H:%M:%SZ') for time in input_times]
         # Find the latest date from the inputs
@@ -1203,10 +1244,10 @@ class GoogleAPI:
         # Increment days starting from the day after the latest date
         increment_day = 1
 
-        while count < num_dates:
+        while count < num_videos:
             # Generate dates for each specified time of publication
             for publish_time in publish_times:
-                if count >= num_dates:
+                if count >= num_videos:
                     break
                 # Create a new date combining the latest date and the time of publication
                 new_date = datetime(latest_date.year, latest_date.month, latest_date.day) + timedelta(days=increment_day)
@@ -1269,3 +1310,4 @@ def prompt3(doc_ids: dict):
                 continue
             else:
                 break
+
