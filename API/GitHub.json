@@ -2,7 +2,7 @@
     "openapi": "3.1.0",
     "info": {
         "title": "GitHub Repository Content API",
-        "description": "API for retrieving contents of the 'MyGPTs-Dev-Mode' repository on GitHub.",
+        "description": "API for retrieving contents of the 'JokeStoryCreatorDev' repository on GitHub.",
         "version": "v1.0.0"
     },
     "servers": [
@@ -11,9 +11,9 @@
         }
     ],
     "paths": {
-        "/repos/RanArino/MyGPTs-Dev-Mode/contents/JokeStoryCreator/Developer/{path}?ref={branch}": {
+        "/repos/RanArino/JokeStoryCreatorDev/contents/{path}?ref={branch}": {
             "get": {
-                "description": "Get the files under the 'MyGPTs-Dev-Mode/JokeStoryCreator/Developer' folder.",
+                "description": "Get the files under the 'JokeStoryCreatorDev' folder.",
                 "operationId": "GetData",
                 "parameters": [
                     {
@@ -53,7 +53,7 @@
                 }
             },
             "put": {
-                "description": "Update the 'JokeStoryCreator/Developer/joke_data.json' file in the 'MyGPTs-Dev-Mode' repository and create a new commit.",
+                "description": "Update the 'JokeStoryCreatorDev/joke_data.json' file and create a new commit.",
                 "operationId": "UpdateData",
                 "parameters": [
                     {
@@ -117,7 +117,7 @@
                 }
             }
         },
-        "/repos/RanArino/MyGPTs-Dev-Mode/contents/JokeStoryCreator/Developer/Images/{path}?ref={branch}": {
+        "/repos/RanArino/JokeStoryCreatorDev/Images/{path}?ref={branch}": {
             "put": {
                 "description": "Upload the new images to the 'Images' folder and create a new commit.",
                 "operationId": "AddImages",
