@@ -1113,7 +1113,7 @@ class GoogleAPI:
         # Convert list of files to a dictionary with name as key and id as value
         docs_dict = {doc['name']: doc['id'] for doc in results.get('files', [])}
 
-        return docs_dict
+        return dict(sorted(docs_dict.items()))
     
     def create_docs(self, name: str):
         # Define the file metadata including the name and the parent folder ID
