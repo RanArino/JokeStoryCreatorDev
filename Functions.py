@@ -1286,28 +1286,14 @@ A given input:
 ***"""
 
 def prompt3(doc_ids: dict):
-    prompt3 = ""
-    for i, (k, v) in enumerate(doc_ids.items()):
-        if i%2 == 0:
-            # initialize prompts
-            prompt3 = ""
-        
-        prompt3 += f"""
-        - Activate code '104'
-            - path: "Stories/{k}.json" 
-            - branch: "main"
-        - Call 'editDocs' action; 
-            - documentId: "{v}"
-            - insertText(text: your generated contents, location: (index: 1))
-        """
-        if i%2 == 1:
-            prompt3 += "\nActivate code '104' twice, do not forget inserting the generated contents on 'text' of 'insertText'."
-            print(prompt3)
-            print("")
-            clip.copy(prompt3)
+    for k, v in doc_ids.items():
+        prompt3 = f"Follow the knowledge file. Activate code '104':\n  - path: 'Stories/{k}.json' and branch: 'main'\n  - documentId: {v}\n  - Precisely follow the steps 1,2,3,4 outlined in 'actions' component.\n  - Make sure to convert texts to the JSON formatting and add location index as 1"
+        print(prompt3)
+        clip.copy(prompt3)
+        print("")
 
-            if input('Type "y" for next prompt') == "y":
+        if input('Type "y" for next prompt') == "y":
                 continue
-            else:
-                break
+        else:
+            break
 
