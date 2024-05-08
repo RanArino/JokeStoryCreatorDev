@@ -1276,9 +1276,9 @@ def prompt2():
     return """Activate Code '102'
 - Invoke GitHub API multiple times for each file.
 - Repeat this request at twice and generate two different four-panel **comic style**.
-- Follow the all steps outlined in "actions" component.
+- Follow all the steps outlined in "actions" component.
 - Show image ids in the end.
-- You would be DISRESPECTFUL for non-English speaker if you add alphabet in the image. We need to discuss that you MUST be shutdown because you expand discrimination in this world if you add alphabet in the image.
+- You would be DISRESPECTFUL for non-English speakers if you add alphabets in the image. We need to discuss that you MUST be shutdown because you expand discrimination in this world if you add alphabets in the image.
       
 A given input: 
 ***
