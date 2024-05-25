@@ -700,7 +700,7 @@ class Video:
         return final_music
 
 
-    def auto_crop_comic_strip(self, img_path: str, dim: tuple = (2160, 2160), mode: str = 'auto'):
+    def auto_crop_comic_strip(self, img_path: str, mode: str = 'auto', dim: tuple = (2160, 2160),):
         """
         Split the four-panel comic stric format into four np.array structures.
 
@@ -842,14 +842,14 @@ class Video:
         return cropped_image
 
 
-    def image_crop_test(self, img_path: list):
+    def image_crop_test(self, args: list[dict]):
         # Simply test the image cropping
-        for path in img_path:
-            cropped = self.auto_crop_comic_strip(path, mode='auto')  # 'auto' or 'manual'
+        for arg in args:
+            cropped = self.auto_crop_comic_strip(arg['path'], arg['mode'])  # 'auto' or 'manual'
             
             # Create a figure that can accommodate both the layouts of fig1 and fig2
             fig3, axs = plt.subplots(2, 3, figsize=(8, 5))  # Creating a 2x3 grid overall
-            fig3.suptitle(path)
+            fig3.suptitle(arg['path'])
 
             # The first four subplots (2x2) at indices 0, 1, 3, 4 of a 2x3 grid
             for i in range(4):
