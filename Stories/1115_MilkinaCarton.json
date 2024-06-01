@@ -1,0 +1,21 @@
+{
+    "description": "A funny dad joke about milk in a carton.",
+    "title": "Milk in a Carton",
+    "c1_name": "Dad",
+    "c2_name": "Cashier",
+    "c1_gender": "male",
+    "c2_gender": "female",
+    "n_1": "Dad is at the grocery store checkout with a carton of milk.",
+    "c1_1": "Can you put the milk in a bag?",
+    "c2_1": "Sure, would you like the milk in a bag?",
+    "n_2": "The cashier starts to put the milk in a bag.",
+    "c1_2": "No, just leave it in the carton!",
+    "c2_2": "Haha, good one!",
+    "n_3": "Both Dad and the cashier laugh at the joke.",
+    "c1_3": "I get everyone with that!",
+    "c2_3": "Classic dad joke!",
+    "n_4": "They finish the transaction with smiles.",
+    "c1_4": "Have a great day!",
+    "c2_4": "You too!"
+  }
+  
