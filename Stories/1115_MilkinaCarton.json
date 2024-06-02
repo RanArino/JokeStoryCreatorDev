@@ -16,6 +16,22 @@
     "c2_3": "Classic dad joke!",
     "n_4": "They finish the transaction with smiles.",
     "c1_4": "Have a great day!",
-    "c2_4": "You too!"
+    "c2_4": "You too!",
+    "script_flow": [
+      "n_1",
+      "c1_1",
+      "c2_1",
+      "n_2",
+      "c1_2",
+      "c2_2",
+      "n_3",
+      "c1_3",
+      "c2_3",
+      "n_4",
+      "c1_4",
+      "c2_4"
+    ],
+    "id": 1115,
+    "image_id": "EFETbki59KEoODVp"
   }
   
