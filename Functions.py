@@ -233,6 +233,7 @@ class JokeStory:
         story = self.story.dropna().iloc[-1]
         # desired image file name
         d_file = f"{story['id']:03d}_{story['title'].replace(' ', '')}"
+        # d_file = f"{int(story['id']):03d}_{story['title'].replace(' ', '')}"
 
         # find original file name
         path = "C:/Users/runru/Downloads"

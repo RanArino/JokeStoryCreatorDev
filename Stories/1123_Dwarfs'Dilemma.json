@@ -1,0 +1,21 @@
+{
+    "description": "It's a play on words with Snow White's dwarfs.",
+    "title": "Dwarfs' Dilemma",
+    "c1_name": "Doc",
+    "c2_name": "Grumpy",
+    "c1_gender": "male",
+    "c2_gender": "male",
+    "n_1": "The dwarfs are gathered in their cozy cottage.",
+    "c1_1": "We've got a problem!",
+    "c2_1": "What's wrong now?",
+    "n_2": "Doc pulls out a survey report.",
+    "c1_2": "6 out of 7 of us aren't happy!",
+    "c2_2": "Who's the happy one?",
+    "n_3": "The dwarfs look around, confused.",
+    "c1_3": "It's a mystery...",
+    "c2_3": "Not me, that's for sure!",
+    "n_4": "Happy, the seventh dwarf, is seen smiling in the background.",
+    "c1_4": "At least one of us is!",
+    "c2_4": "Figures..."
+  }
+  
