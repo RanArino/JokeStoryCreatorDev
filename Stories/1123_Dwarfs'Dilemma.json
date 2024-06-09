@@ -16,6 +16,22 @@
     "c2_3": "Not me, that's for sure!",
     "n_4": "Happy, the seventh dwarf, is seen smiling in the background.",
     "c1_4": "At least one of us is!",
-    "c2_4": "Figures..."
+    "c2_4": "Figures...",
+    "script_flow": [
+        "n_1",
+        "c1_1",
+        "c2_1",
+        "n_2",
+        "c1_2",
+        "c2_2",
+        "n_3",
+        "c1_3",
+        "c2_3",
+        "n_4",
+        "c1_4",
+        "c2_4"
+    ],
+    "id": 1123,
+    "image_id": "2D26eKdV5ermUHHn8"
   }
   
